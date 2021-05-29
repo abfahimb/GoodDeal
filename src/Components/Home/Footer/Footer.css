@@ -1,0 +1,64 @@
+.footer_area{
+    padding-bottom: 100px;
+}
+.footer_area .footer_title h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #323232;
+    margin: 0 0 20px;
+}
+.footer_area .footer_content p{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #4a4a4a;
+    margin: 23px 0 20px;
+}
+.footer_area .footer_content ul{
+    margin: 0;
+    padding: 0;
+}
+.footer_area .footer_content ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+.footer_area .footer_content ul li a{
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    transition: .4s;
+}
+
+.footer_area .footer_content ul li a:hover{
+    text-decoration: none;
+    color: #e97730;
+}
+
+.footer_area .getInTouch_content ul{
+    padding: 0;
+    margin: 0;
+}
+.footer_area .getInTouch_content ul li{
+    list-style: none;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+.footer_area .getInTouch_content ul li span{
+    color: #4a4a4a;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer_area .getInTouch_content .open_time p{
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 2px;
+}
+
+.footer_area .getInTouch_content .open_time p span{
+    color: #e97730;
+}

@@ -10,6 +10,7 @@ import BannerThree from '../BannerThree/BannerThree';
 import ProductThree from '../ProductThree/ProductThree';
 import Brand from '../Brand/Brand';
 import Blog from '../Blog/Blog';
+import Footer from '../Footer/Footer';
 
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
            <ProductThree></ProductThree>
            <Brand></Brand>
            <Blog></Blog>
+           <Footer></Footer>
         </div>
     );
 };
