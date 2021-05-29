@@ -34,6 +34,9 @@
     margin: 0;
 }
 
+.product_item{
+    margin-bottom: 30px;
+}
 .product_img{
     position: relative;
 }
@@ -59,11 +62,14 @@
     opacity: 0;
     transition: .4s;
 }
+.product_img .product_icon a:hover {
+    background-color: #e97730;
+}
 .product_item:hover .product_img .product_icon a.heart_icon, a.eye_icon{
     opacity: 1;
 }
 .product_img .product_icon a.eye_icon{
-    left: 35%;
+    left: 29%;
     transition: .4s;
     opacity: 0;
 }
