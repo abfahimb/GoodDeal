@@ -1,0 +1,23 @@
+.admin{
+    background: white;
+    height: 100%;
+}
+.ul{
+    list-style: none;
+}
+.ul>li{
+    padding: 5px 3px;
+}
+.ul>li:hover{
+    background-color: #eef5f9;
+    cursor: pointer;
+}
+li>a{
+    color:black;
+}
+li>a:hover{
+      text-decoration: none;
+}
+.row{
+    height: 100%;
+}
