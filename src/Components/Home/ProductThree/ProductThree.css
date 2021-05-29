@@ -1,0 +1,25 @@
+.product_three_area{
+    padding-bottom: 100px;
+}
+.product_three_area .title{
+    margin-bottom: 70px;
+}
+.product_three_area .title h2{
+    font-size: 36px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+}
+
+.product_three_area .title h2::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -17px;
+    width: 100px;
+    height: 2px;
+    background-color: #e97730;
+}
