@@ -9,6 +9,8 @@ import ProductTwo from '../ProductTwo/ProductTwo';
 import BannerThree from '../BannerThree/BannerThree';
 import ProductThree from '../ProductThree/ProductThree';
 import Brand from '../Brand/Brand';
+import Blog from '../Blog/Blog';
+
 
 const Home = () => {
     return (
@@ -23,6 +25,7 @@ const Home = () => {
            <BannerThree></BannerThree>
            <ProductThree></ProductThree>
            <Brand></Brand>
+           <Blog></Blog>
         </div>
     );
 };
