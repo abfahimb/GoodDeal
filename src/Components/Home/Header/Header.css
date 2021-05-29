@@ -1,0 +1,20 @@
+
+.header_top{
+    padding: 10px 0;
+    background-color: #f5f3f3;
+}
+.header_top p{
+    color: #383837;
+    margin: 0;
+    font-family: "Montserrat", sans-serif
+}
+.language a{
+    text-decoration: none;
+    color: #383838;
+    padding: 0 15px;
+    border-right: 1px solid #000;
+}
+
+.language a:last-child{
+    border-right: none;
+}
