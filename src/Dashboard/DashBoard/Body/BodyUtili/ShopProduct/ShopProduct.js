@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './DealDay.module.css';
+import styles from './ShopProduct.module.css';
 import { useForm } from 'react-hook-form';
-const DealDay = () => {
+const ShopProduct = () => {
   const {
     register,
     handleSubmit,
@@ -22,7 +22,7 @@ const DealDay = () => {
     formData.append('Size', data.Size);
     formData.append('Description', data.Description);
 
-    fetch(`http://localhost:5000/hotDeal`, {
+    fetch(`http://localhost:5000/ShopProduct`, {
       method: 'POST',
       body: formData,
     }).then((result) => {
@@ -39,7 +39,7 @@ const DealDay = () => {
   };
   return (
     <section className={styles.section}>
-      <h3 className='text-center py-4'>Deal of the day</h3>
+      <h3 className='text-center py-4'>Add Shop Product</h3>
       <form onSubmit={handleSubmit(onSubmit)} id='form' className={styles.form}>
         <input {...register('ItemName')} placeholder=' Enter Item Name' />
         <input
@@ -118,4 +118,6 @@ const DealDay = () => {
   );
 };
 
-export default DealDay;
+export default ShopProduct;
+
+// export default ShopProduct;
