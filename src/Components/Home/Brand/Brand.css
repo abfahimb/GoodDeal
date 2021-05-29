@@ -1,0 +1,11 @@
+.brand_area{
+    padding-bottom: 100px;
+}
+.brand_bg{
+    border: 1px solid #ddd;
+    padding: 40px;
+}
+.brand_area img{
+    width: 80px;
+    height: 80px;
+}
