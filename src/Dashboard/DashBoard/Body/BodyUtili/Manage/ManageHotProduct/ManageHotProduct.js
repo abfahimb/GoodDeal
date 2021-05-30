@@ -1,93 +1,84 @@
 import React, { useEffect, useState } from 'react';
 import { DropdownButton, Dropdown, Button } from 'react-bootstrap';
-import styles from './ManageDealDay.module.css';
+import styles from './ManageHotProduct.module.css';
 import { useForm } from 'react-hook-form';
-const ManageDealDay = () => {
+const ManageHotProduct = () => {
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-    const [hotDealProduct, setProduct] = useState([]);
-    const [SingleProduct, setSingleProduct] = useState('');
-    const [SingleProduct1, setSingleProduct1] = useState(0);
-    const [SingleProduct2, setSingleProduct2] = useState(0);
-    const [ItemName, setProductName] = useState('');
+  const [HotProduct, setProduct] = useState([]);
+  const [SingleProduct, setSingleProduct] = useState('');
+  const [SingleProduct1, setSingleProduct1] = useState(0);
+  const [SingleProduct2, setSingleProduct2] = useState(0);
+  const [ItemName, setProductName] = useState('');
   const [value, setValue] = useState('');
   useEffect(() => {
-    fetch(`http://localhost:5000/hotDealProduct`)
+    fetch(`http://localhost:5000/hotProductData`)
       .then((documents) => documents.json())
       .then((result) => {
         setProduct(result);
       });
   }, []);
-//collect all the id
-  const id = hotDealProduct?.map((product) => {
+  console.log(HotProduct);
+  //collect all the id
+  const id = HotProduct?.map((product) => {
     return product._id;
   });
-//handle dropdown change
+  //handle dropdown change
   const handleSelect = (e) => {
     console.log(e);
     setValue(e);
-    };
-    const selectedValue = hotDealProduct.filter(
-        (product) => product._id === value
-    );
-//handle form 
-    const onSubmit = (data) => {
-        fetch(`http://localhost:5000/hotDealUpdate/` + value, {
-          method: 'PATCH',
-          headers: { 'Content-type': 'application/json' },
-          body: JSON.stringify(data),
-        }).then((result) =>
-        {
-            data = {};
-            if (result.status === 200)
-            {
-                alert('Product Update Successfully')
-                window.location.reload();
-            } else
-            {
-                   alert('Product Can not Update');
-        }
-        });
-      
-    
-    };
-    const onTodoChange = (e) =>
-    {
-        setSingleProduct(e)
-    }
-     const onTodoChange1 = (e) => {
-       setSingleProduct1(e);
-    };
-    const onTodoChange2 = (e) => {
-      setSingleProduct2(e);
-    };
-     const onTodoChange3 = (e) => {
-       setProductName(e);
-    };
+  };
+  const selectedValue = HotProduct.filter((product) => product._id === value);
+  //handle form
+  const onSubmit = (data) => {
+    fetch(`http://localhost:5000/HotProductUpdate/` + value, {
+      method: 'PATCH',
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(data),
+    }).then((result) => {
+      data = {};
+      if (result.status === 200) {
+        alert('Product Update Successfully');
+        window.location.reload();
+      } else {
+        alert('Product Can not Update');
+      }
+    });
+  };
+  const onTodoChange = (e) => {
+    setSingleProduct(e);
+  };
+  const onTodoChange1 = (e) => {
+    setSingleProduct1(e);
+  };
+  const onTodoChange2 = (e) => {
+    setSingleProduct2(e);
+  };
+  const onTodoChange3 = (e) => {
+    setProductName(e);
+  };
 
-    //delete a item
-    const handleDelete = () =>
-    {
-        console.log('DeleteHotDeal', value);
-        fetch(`http://localhost:5000/DeleteHotDeal/` + value, {
-          method: 'DELETE',
-        }).then((result) =>
-        {
-              if (result.status === 200) {
-                alert('Product Deleted Successfully');
-                window.location.reload();
-              } else {
-                alert('Product Can not Delete');
-              }
-        });
-    }
+  //delete a item
+  const handleDelete = () => {
+    console.log('DeleteHotDeal', value);
+    fetch(`http://localhost:5000/DeleteHotProduct/` + value, {
+      method: 'DELETE',
+    }).then((result) => {
+      if (result.status === 200) {
+        alert('Product Deleted Successfully');
+        window.location.reload();
+      } else {
+        alert('Product Can not Delete');
+      }
+    });
+  };
   return (
     <section className={styles.section}>
-      {hotDealProduct.length > 0 && (
+      {HotProduct.length > 0 && (
         <DropdownButton
           className='text-center pt-5'
           alignRight
@@ -100,7 +91,7 @@ const ManageDealDay = () => {
           })}
         </DropdownButton>
       )}
-      {hotDealProduct.length <= 0 && <div>Option is loading</div>}
+      {HotProduct.length <= 0 && <div>Option is loading</div>}
       {value !== '' && (
         <Button variant='danger' onClick={handleDelete}>
           Remove
@@ -114,7 +105,9 @@ const ManageDealDay = () => {
           {...register('itemName', { required: true })}
           onChange={(e) => onTodoChange3(e.target.value)}
           value={
-            ItemName !== '' ? ItemName : selectedValue[0]?.hotDeal.ProductName
+            ItemName !== ''
+              ? ItemName
+              : selectedValue[0]?.HotProduct.ProductName
           }
         />
         <label for='NewPrice'>Product New Price</label>
@@ -125,7 +118,7 @@ const ManageDealDay = () => {
           onChange={(e) => onTodoChange2(e.target.value)}
           value={
             SingleProduct2 === 0
-              ? selectedValue[0]?.hotDeal.Price
+              ? selectedValue[0]?.HotProduct.Price
               : SingleProduct2
           }
         />
@@ -137,7 +130,7 @@ const ManageDealDay = () => {
           onChange={(e) => onTodoChange1(e.target.value)}
           value={
             SingleProduct1 === 0
-              ? selectedValue[0]?.hotDeal.OldPrice
+              ? selectedValue[0]?.HotProduct.OldPrice
               : SingleProduct1
           }
         />
@@ -150,7 +143,7 @@ const ManageDealDay = () => {
           value={
             SingleProduct !== ''
               ? SingleProduct
-              : selectedValue[0]?.hotDeal.Description
+              : selectedValue[0]?.HotProduct.Description
           }
         ></textarea>
 
@@ -160,4 +153,4 @@ const ManageDealDay = () => {
   );
 };
 
-export default ManageDealDay;
+export default ManageHotProduct;

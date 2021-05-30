@@ -23,15 +23,14 @@ const Sidebar = () => {
           <NavLink to='/ManageHotProduct' activeClassName={styles.selected}>
             Manage Hot Product
           </NavLink>
-
+          <NavLink to='/MangeShopProduct' activeClassName={styles.selected}>
+            Manage Shop Product
+          </NavLink>
           <NavLink to='/ManageOrder' activeClassName={styles.selected}>
             Manage Order
           </NavLink>
           <NavLink to='/ManageUser' activeClassName={styles.selected}>
             Manage User
-          </NavLink>
-          <NavLink to='/MangeShopProduct' activeClassName={styles.selected}>
-            Manage Shop Product
           </NavLink>
         </ul>
       </nav>
