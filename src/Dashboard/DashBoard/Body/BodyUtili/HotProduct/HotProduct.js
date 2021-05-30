@@ -61,12 +61,16 @@ const HotProduct = () => {
         <select className={styles.select} {...register('Tags')}>
           <option value='Furniture'>Furniture</option>
         </select>
+        <label for='Category'>
+          Choose Category:
+          <small>(For Multiple selection ,Hold ctrl and click)</small>
+        </label>
         <select
+          name='Category'
           className={styles.select}
           {...register('Category', { required: true })}
           multiple
         >
-          <option>Select Category</option>
           <option value='Office'>Office</option>
           <option value='Home'>Home</option>
           <option value='Marriage Program'>Marriage Program</option>

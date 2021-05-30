@@ -6,6 +6,7 @@ import ManageUser from '../BodyUtili/ManageUser';
 import DealDay from '../BodyUtili/DealDay/DealDay';
 import HotProduct from '../BodyUtili/HotProduct/HotProduct';
 import ShopProduct from '../BodyUtili/ShopProduct/ShopProduct';
+import ManageDealDay from '../BodyUtili/Manage/ManageDealDay/ManageDealDay';
 const Body = () => {
   return (
     <section className={styles.body}>
@@ -27,6 +28,9 @@ const Body = () => {
         </Route>
         <Route path='/ShopProduct'>
           <ShopProduct />
+        </Route>
+        <Route path='/ManageDeal'>
+          <ManageDealDay />
         </Route>
       </Switch>
     </section>
