@@ -28,7 +28,7 @@ const ProductTwo = () => {
                           <div className="product_wrapper">
                           <div className="product_quantity">
                                <button className="dec_quantity">-</button>
-                               <input type="text" value="1" />
+                               <input type="text"  />
                                <button className="inc_quantity">+</button>
                            </div>
                            <div className="btn">
