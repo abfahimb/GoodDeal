@@ -16,7 +16,7 @@ const ManageDealDay = () => {
     const [ItemName, setProductName] = useState('');
   const [value, setValue] = useState('');
   useEffect(() => {
-    fetch(`http://localhost:5000/hotDealProduct`)
+    fetch(`https://gooddealserver.herokuapp.com/hotDealProduct`)
       .then((documents) => documents.json())
       .then((result) => {
         setProduct(result);
@@ -36,21 +36,18 @@ const ManageDealDay = () => {
     );
 //handle form 
     const onSubmit = (data) => {
-        fetch(`http://localhost:5000/hotDealUpdate/` + value, {
+        fetch(`https://gooddealserver.herokuapp.com/hotDealUpdate/` + value, {
           method: 'PATCH',
           headers: { 'Content-type': 'application/json' },
           body: JSON.stringify(data),
-        }).then((result) =>
-        {
-            data = {};
-            if (result.status === 200)
-            {
-                alert('Product Update Successfully')
-                window.location.reload();
-            } else
-            {
-                   alert('Product Can not Update');
-        }
+        }).then((result) => {
+          data = {};
+          if (result.status === 200) {
+            alert('Product Update Successfully');
+            window.location.reload();
+          } else {
+            alert('Product Can not Update');
+          }
         });
       
     
@@ -73,16 +70,15 @@ const ManageDealDay = () => {
     const handleDelete = () =>
     {
         console.log('DeleteHotDeal', value);
-        fetch(`http://localhost:5000/DeleteHotDeal/` + value, {
+        fetch(`https://gooddealserver.herokuapp.com/DeleteHotDeal/` + value, {
           method: 'DELETE',
-        }).then((result) =>
-        {
-              if (result.status === 200) {
-                alert('Product Deleted Successfully');
-                window.location.reload();
-              } else {
-                alert('Product Can not Delete');
-              }
+        }).then((result) => {
+          if (result.status === 200) {
+            alert('Product Deleted Successfully');
+            window.location.reload();
+          } else {
+            alert('Product Can not Delete');
+          }
         });
     }
   return (

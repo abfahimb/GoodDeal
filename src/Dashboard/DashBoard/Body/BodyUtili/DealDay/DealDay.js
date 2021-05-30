@@ -22,7 +22,7 @@ const DealDay = () => {
     formData.append('Size', data.Size);
     formData.append('Description', data.Description);
 
-    fetch(`http://localhost:5000/hotDeal`, {
+    fetch(`https://gooddealserver.herokuapp.com/hotDeal`, {
       method: 'POST',
       body: formData,
     }).then((result) => {

@@ -16,7 +16,7 @@ const ManageHotProduct = () => {
   const [ItemName, setProductName] = useState('');
   const [value, setValue] = useState('');
   useEffect(() => {
-    fetch(`http://localhost:5000/hotProductData`)
+    fetch(`https://gooddealserver.herokuapp.com/hotProductData`)
       .then((documents) => documents.json())
       .then((result) => {
         setProduct(result);
@@ -35,7 +35,7 @@ const ManageHotProduct = () => {
   const selectedValue = HotProduct.filter((product) => product._id === value);
   //handle form
   const onSubmit = (data) => {
-    fetch(`http://localhost:5000/HotProductUpdate/` + value, {
+    fetch(`https://gooddealserver.herokuapp.com/HotProductUpdate/` + value, {
       method: 'PATCH',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(data),
@@ -65,7 +65,7 @@ const ManageHotProduct = () => {
   //delete a item
   const handleDelete = () => {
     console.log('DeleteHotDeal', value);
-    fetch(`http://localhost:5000/DeleteHotProduct/` + value, {
+    fetch(`https://gooddealserver.herokuapp.com/DeleteHotProduct/` + value, {
       method: 'DELETE',
     }).then((result) => {
       if (result.status === 200) {

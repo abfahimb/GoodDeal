@@ -22,7 +22,7 @@ const HotProduct = () => {
     formData.append('Size', data.Size);
     formData.append('Description', data.Description);
 
-    fetch(`http://localhost:5000/HotProduct`, {
+    fetch(`https://gooddealserver.herokuapp.com/HotProduct`, {
       method: 'POST',
       body: formData,
     }).then((result) => {
