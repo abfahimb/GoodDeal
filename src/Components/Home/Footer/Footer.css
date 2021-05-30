@@ -1,0 +1,233 @@
+.footer-about .footer-logo a {
+    display: block;
+  }
+  
+  .footer-about .footer-logo a img {
+    max-width: 100%;
+  }
+  
+  .footer-about p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #4a4a4a;
+    margin: 23px 0 20px;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .footer-about p {
+      font-size: 14px;
+    }
+  }
+  
+  .footer-about .payment-img a {
+    display: block;
+  }
+  
+  .footer-about .payment-img a img {
+    max-width: 100%;
+  }
+  
+  .footer-widget h3.footer-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #323232;
+    margin: 0 0 20px;
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .footer-widget h3.footer-title {
+      font-size: 19px;
+    }
+  }
+  
+  .footer-list ul li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-list ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .footer-list ul li a {
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .footer-list ul li a {
+      font-size: 14px;
+    }
+  }
+  
+  .footer-list ul li a:hover {
+    color: #e97730;
+  }
+  
+  .footer-address ul li {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 6px;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .footer-address ul li {
+      font-size: 14px;
+    }
+  }
+  
+  .footer-address ul li span {
+    color: #4a4a4a;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .open-time {
+    margin: 20px 0 0;
+  }
+  
+  .open-time p {
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 2px;
+  }
+  
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .open-time p {
+      font-size: 15px;
+    }
+  }
+  
+  .open-time p span {
+    color: #e97730;
+  }
+  
+  .open-time p:last-child {
+    margin: 0 0 0;
+  }
+  
+  .copyright {
+    padding: 14px 0 12px;
+  }
+  
+  .copyright p {
+    margin: 0;
+    color: #333;
+    font-weight: 300;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .copyright p i {
+    color: #fa0909;
+    margin: 0 5px;
+  }
+  
+  .copyright p a {
+    color: #e97730;
+    font-weight: 500;
+    margin-left: 5px;
+  }
+  
+  .copyright p a:hover {
+    color: #000000;
+  }
+  
+  .footer-widget-margin-1 {
+    margin-left: 50px;
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .footer-widget-margin-1 {
+      margin-left: 0px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .footer-widget-margin-1 {
+      margin-left: 0px;
+    }
+  }
+  
+  .footer-widget-margin-2 {
+    margin-left: 20px;
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .footer-widget-margin-2 {
+      margin-left: 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .footer-widget-margin-2 {
+      margin-left: 0px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .footer-widget-margin-2 {
+      margin-left: 0px;
+    }
+  }
+  
+  .footer-area-margin-lr {
+    margin: 0 120px;
+  }
+  
+  @media only screen and (min-width: 1366px) and (max-width: 1600px) {
+    .footer-area-margin-lr {
+      margin: 0 50px;
+    }
+  }
+  
+  @media only screen and (min-width: 1200px) and (max-width: 1365px) {
+    .footer-area-margin-lr {
+      margin: 0 15px;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .footer-area-margin-lr {
+      margin: 0 30px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .footer-area-margin-lr {
+      margin: 0 40px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .footer-area-margin-lr {
+      margin: 0 15px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .footer-top.pt-80 {
+      padding-top: 70px;
+    }
+    .footer-top.pb-35 {
+      padding-bottom: 25px;
+    }
+  }
+  
