@@ -1,3 +1,12 @@
+.footer-area .bg-gray-2{
+  background-color: #f4f4f4;
+  padding: 100px 0;
+}
+
+.footer-area .bg-gray-3{
+  /* padding-top: 100px; */
+  background-color: #f0f0f0;
+}
 .footer-about .footer-logo a {
     display: block;
   }

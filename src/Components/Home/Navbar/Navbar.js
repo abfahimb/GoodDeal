@@ -19,7 +19,8 @@ const Navbar = (props) => {
                             <Link to="/home" className="nav-link active" >Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Shop</a>
+                            {/* <a className="nav-link" href="#">Shop</a> */}
+                            <Link to="/shop" className="nav-link active" >Shop</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Blog</a>

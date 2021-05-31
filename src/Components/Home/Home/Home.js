@@ -9,6 +9,8 @@ import ProductTwo from '../ProductTwo/ProductTwo';
 import BannerThree from '../BannerThree/BannerThree';
 import ProductThree from '../ProductThree/ProductThree';
 import Footer from '../Footer/Footer';
+import Blog from '../Blog/Blog';
+import Brand from '../Brand/Brand';
 
 const Home = () => {
     return (
@@ -22,6 +24,8 @@ const Home = () => {
            <ProductTwo></ProductTwo>
            <BannerThree></BannerThree>
            <ProductThree></ProductThree>
+           <Brand></Brand>
+           <Blog></Blog>
            <Footer></Footer>
         </div>
     );

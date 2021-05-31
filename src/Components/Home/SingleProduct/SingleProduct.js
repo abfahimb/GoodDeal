@@ -3,7 +3,6 @@ import { faShoppingCart, faHeart, faEye } from '@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function SingleProduct(props) {
-    // console.log(props)
     const {addToCart, product} = props;
 
     
@@ -13,8 +12,8 @@ function SingleProduct(props) {
                 <div className="product_img">
                     <img src={product.productImage} alt="productOne" />
                     <div className="product_icon">
-                        <a href="" className="heart_icon"><FontAwesomeIcon icon={faHeart} /></a>
-                        <a href="" className="eye_icon"><FontAwesomeIcon icon={faEye} /></a>
+                        <a href="#" className="heart_icon"><FontAwesomeIcon icon={faHeart} /></a>
+                        <a href="#" className="eye_icon"><FontAwesomeIcon icon={faEye} /></a>
                     </div>
                     <div  className="product_overlay">
                         <button className="btn text-white" onClick={()=>addToCart(product.id, product, product.productName)}><FontAwesomeIcon icon={faShoppingCart} />Add to Card</button>

@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
 import Cart from './Components/Home/Cart/Cart';
+import Shop from './Components/Shop/Shop/Shop';
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
           <Route path="/viewCart">
             <Cart></Cart>
           </Route>
-          <Route >
-
+          <Route path="/shop">
+            <Shop></Shop>
           </Route>
         </Switch>
     </Router>

@@ -27,7 +27,7 @@ function Cart(props) {
                     <div class="breadcrumb-content text-center">
                         <h2>Cart</h2>
                         <ul className="d-flex">
-                            <li><a href="">Home</a></li>
+                            <li><a href="#">Home</a></li>
                             <li>{">"}</li>
                             <li>Cart</li>
                         </ul>
@@ -76,7 +76,7 @@ function Cart(props) {
                 </div>
             </div>
 
-           <Footer></Footer>
+           {/* <Footer></Footer> */}
         </div>
     )
 }
