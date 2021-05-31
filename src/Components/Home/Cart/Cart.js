@@ -9,7 +9,7 @@ import Header from '../Header/Header';
 import CartItem from './CartItem';
 import { connect } from 'react-redux';
 import { removeFromCart } from '../../../redux/actions/cardAction';
-import Footer from '../Footer/Footer';
+
 
 
 function Cart(props) {
@@ -17,7 +17,7 @@ function Cart(props) {
 
     // console.log(props)
     return (
-        <div>
+        <div className="cart_area">
             <Header></Header>
             <div class="breadcrumb-area bg-gray-4 breadcrumb-padding-1 d-flex justify-content-between " style={{ paddingTop: '200px', zIndex: '100' }}>
                 <div class="breadcrumb-img-1">
@@ -75,8 +75,6 @@ function Cart(props) {
                     </div>
                 </div>
             </div>
-
-           {/* <Footer></Footer> */}
         </div>
     )
 }

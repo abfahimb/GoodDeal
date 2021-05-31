@@ -1,0 +1,77 @@
+.blogPageBanner_area .breadcrumb-padding-1 {
+    padding: 151px 0 152px;
+}
+.blogPageBanner_area .bg-gray-4{
+    background-color: #f2f2f2;
+}
+.blogPageBanner_area .blogPageBanner_breadcrumb_area{
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.blogPageBanner_area .blogPageBanner_breadcrumb_area::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -25px;
+    margin: 0 auto;
+    width: 342px;
+    height: 342px;
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+
+.blogPageBanner_area .blogPageBanner_breadcrumb_area .blogPageBanner_content {
+    position: relative;
+    text-align: center;
+    z-index: 999;
+}
+
+.blogPageBanner_area .blogPageBanner_breadcrumb_area .blogPageBanner_content h2 {
+    font-size: 48px;
+    font-weight: 500;
+    color: #323232;
+    line-height: 1;
+    margin: 0 0 29px;
+}
+.blogPageBanner_area .blogPageBanner_breadcrumb_area .blogPageBanner_content ul{
+    display: flex;
+    justify-content: center;
+}
+
+.blogPageBanner_area .blogPageBanner_breadcrumb_area .blogPageBanner_content ul li {
+    list-style: none;
+    margin-right: 7px;
+    color: #686868;
+    z-index:999;
+}
+
+.blogPageBanner_area .blogPageBanner_breadcrumb_area .blogPageBanner_content ul li a {
+    font-weight: 500;
+    font-size: 13px;
+    display: inline-block;
+    color: #000000;
+    transition: .4s;
+}
+
+.blogPageBanner_area .blogPageBanner_breadcrumb_area .blogPageBanner_content ul li a:hover {
+   text-decoration: none;
+    color: #fd7e14;
+}
+
+.blogPageBanner_area .blogPageBanner_breadcrumb_area .blogPageBanner_area_breadcrumb-img-1 img {
+    max-width: 100%;
+}
+
+.blogPageBanner_area .blogPageBanner_breadcrumb_area .blogPageBanner_area_breadcrumb-img-1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.blogPageBanner_area .blogPageBanner_breadcrumb_area .blogPageBanner_area_breadcrumb-img-2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
