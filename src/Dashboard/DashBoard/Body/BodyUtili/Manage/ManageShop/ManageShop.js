@@ -16,9 +16,7 @@ const ManageShop = () => {
   const [ItemName, setProductName] = useState('');
   const [value, setValue] = useState('');
   useEffect(() => {
-    fetch(
-      `http://localhost:https://gooddealserver.herokuapp.com/ShopAllProducts`
-    )
+    fetch(`https://gooddealserver.herokuapp.com/ShopAllProducts`)
       .then((documents) => documents.json())
       .then((result) => {
         setProduct(result);
