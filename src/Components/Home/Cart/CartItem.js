@@ -1,49 +1,47 @@
 import React, { useState } from 'react';
-import {faTrash, faMinusCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { connect } from 'react-redux';
+import {adjustQTY, removeFromCart} from '../../../redux/Shopping/shopping-actions'
 
-function CartItem(props) {
-    console.log(props)
+function CartItem({ product, removeFromCart, adjustQTY }) {
+    const [input, setInput]=useState(product.qty);
+    const [subtotal, setSubtotal] =useState(0);
 
-    const { product, removeFromCart } = props;
-    const { productName, newPrice, productImage } = props.product.item;
-    const [value, setValue] = useState(1)
-
-    
-    const handleIncrement = () => {
-        setValue(value+1)
+    const onChangeHandler=(e) => {
+        setInput(e.target.value);
+        adjustQTY(product.id, e.target.value);
+        const newPrice=product.newPrice;
+        const value=e.target.value;
+        const totalPrice=(newPrice*value);
+        setSubtotal(totalPrice);
     }
-    const handleDecrement = () => {
-        if(value>1){
-            setValue(value-1)
-        }
-        
-    }
-    
-    const cartPrice =value * newPrice;
 
-    
-
+    // console.log(subtotal)
     return (
         <tr>
             <td class="product-thumbnail">
-                <a href="#"><img src={productImage} alt="" /></a>
+                <a href="#"><img src={product.productImage} alt="" /></a>
             </td>
             <td class="product-name">
-                <h5><a href="#">{productName}</a></h5>
+                <h5><a href="#">{product.productName}</a></h5>
             </td>
-            <td class="product-cart-price"><span class="amount">${newPrice}</span></td>
+            <td class="product-cart-price"><span class="amount">${subtotal}</span></td>
             <td class="cart-quality">
                 <div class="product-quality d-flex justify-content-between align-items-center" style={{ width: '80px' }}>
-                    <div class=""><button onClick={() => handleDecrement()} style={{ backgroundColor: 'white', border: "none" }}><FontAwesomeIcon style={{ cursor: 'pointer' }} icon={faMinusCircle} /></button></div>
-                    <input class="cart-plus-minus-box input-text qty text text-center" name="qtybutton" value={value} style={{ width: '30px', border: 'none', backgroundColor: 'white' }} disabled />
-                    <div class=""><button onClick={() => handleIncrement()} style={{ backgroundColor: 'white', border: "none" }}><FontAwesomeIcon style={{ cursor: 'pointer' }} icon={faPlusCircle} /></button></div>
+                    <input type="number" min="1" onChange={onChangeHandler} class="form-control text-center" name="qtybutton" value={input} />
                 </div>
             </td>
-            <td class="product-total"><span>${cartPrice}</span></td>
-            <td class="product-remove"><><button class="btn btn-danger" onClick={() => removeFromCart(product.cartId)}><FontAwesomeIcon icon={faTrash} /></button></></td>
+            <td class="product-total"><span>${product.newPrice}</span></td>
+            <td class="product-remove"><button class="btn btn-danger" onClick={() => removeFromCart(product.id)}><FontAwesomeIcon icon={faTrash} /></button></td>
         </tr>
     )
 }
 
-export default CartItem;
+const mapToDispatch = (dispatch) => {
+    return {
+        removeFromCart: (id) => dispatch(removeFromCart(id)),
+        adjustQTY: (id, value) => dispatch(adjustQTY(id, value)),
+    }
+}
+export default connect(null, mapToDispatch)(CartItem);

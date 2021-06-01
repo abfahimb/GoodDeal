@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { faSearch,faUserCircle,faHeart,faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 
+import {connect} from 'react-redux';
 
-const Navbar = (props) => {
+const Navbar = ({cart}) => {
+    const [cartCount, setCartCount]=useState(0);
+
+    useEffect(()=>{
+        let count=0;
+        cart.forEach((item)=>{
+            count += item.qty;
+        });
+        setCartCount(count);
+    }, [cart, cartCount])
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light py-3">
             <div className="container">
@@ -45,7 +55,7 @@ const Navbar = (props) => {
                         </li>
                         <li className="nav-item d-flex">
                             <Link to="/viewCart" className="nav-link"><FontAwesomeIcon icon={faShoppingCart} /></Link>
-                            <Link to="/viewCart"><p style={{border: '1px solid #000', height: '24px', width: '24px', borderRadius: '50%', textAlign: 'center', paddingTop: '2px', backgroundColor:'#131212', color: 'white', marginLeft: '-5px', fontSize: '14px'}}>{props.cart.length}</p></Link>
+                            <Link to="/viewCart"><p style={{border: '1px solid #000', height: '24px', width: '24px', borderRadius: '50%', textAlign: 'center', paddingTop: '2px', backgroundColor:'#131212', color: 'white', marginLeft: '-5px', fontSize: '14px'}}>{cartCount}</p></Link>
                         </li>
                         </ul>
                     </div>
@@ -59,12 +69,8 @@ const Navbar = (props) => {
 
 const mapStateToProps = state=>{
     return {
-        cart: state.cart
+        cart: state.shop.cart
     }
 }
 
-
-const mapDispatchToProps = {
-}
-// console.log(mapDispatchToProps)
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default connect(mapStateToProps)(Navbar);

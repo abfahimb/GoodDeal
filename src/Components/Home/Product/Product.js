@@ -1,14 +1,11 @@
 import React from 'react';
-import './Product.css';
-import SingleProduct from '../SingleProduct/SingleProduct';
-import { addToCart } from '../../../redux/actions/cardAction';
 import { connect } from 'react-redux';
+import './Product.css';
+import SingleProduct from '../SingleProduct/SingleProduct'
 
 
 
-const Product = (props) => {
-    console.log(props)
-    const { products, addToCart}=props;
+const Product = ({ products }) => {
     return (
         <div className="product_area">
             <div className="container">
@@ -22,7 +19,7 @@ const Product = (props) => {
                 </div>
                 <div className="row">
                     {
-                        products.map(pd=><SingleProduct product={pd} addToCart={addToCart} key={pd.id}></SingleProduct>)
+                        products.map(pd => <SingleProduct product={pd} key={pd.id}></SingleProduct>)
                     }
                 </div>
             </div>
@@ -30,17 +27,10 @@ const Product = (props) => {
     );
 };
 
-const mapStateToProps = state=>{
+
+const mapStateToProps = (state) => {
     return {
-        cart: state.cart, 
-        products: state.products,
-        hotProducts: state.hotProducts
+        products: state.shop.products
     }
 }
-
-
-const mapDispatchToProps = {
-    addToCart:addToCart  
-}
-// console.log(mapDispatchToProps)
-export default connect(mapStateToProps, mapDispatchToProps)(Product);
+export default connect(mapStateToProps)(Product);

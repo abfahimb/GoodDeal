@@ -6,11 +6,58 @@
           flex: 0 0 70px;
 }
 
-/* .qtybutton {
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.calculate-discount-content p {
+  font-size: 14px;
+  margin-bottom: 18px;
+  display: block;
+  color: #666;
+  line-height: 1;
+}
+
+.calculate-discount-content .input-style {
+  margin-bottom: 15px;
+}
+
+.calculate-discount-content .input-style input {
   color: #000000;
-  left: 10px;
-  cursor: pointer;
-} */
+  height: 52px;
+  border: 1px solid #e5e5e5;
+  background-color: transparent;
+  padding: 2px 16px;
+  width: 100%;
+}
+
+.calculate-discount-content .input-style input:-moz-input-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+.calculate-discount-content .input-style input:-webkit-input-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+.calculate-discount-content .calculate-discount-btn a {
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #000000;
+  z-index: 1;
+  border: none;
+}
+
+.calculate-discount-content .calculate-discount-btn a.btn {
+  border-radius: 0px;
+  padding: 12px 25px 12px;
+}
+
+.calculate-discount-content .calculate-discount-btn a:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 
 .sidebar-cart-active .sidebar-cart-all .cart-content ul li .cart-img a img {
   width: 100%;
@@ -497,7 +544,9 @@ ul {
     z-index: 1;
     border: none;
   }
-  
+  .mb-20 {
+    margin-bottom: 20px;
+  }
   .calculate-discount-content .calculate-discount-btn a.btn {
     border-radius: 0px;
     padding: 12px 25px 12px;
@@ -531,7 +580,7 @@ ul {
     font-size: 20px;
     font-weight: 500;
     margin: 0;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
