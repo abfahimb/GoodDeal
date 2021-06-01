@@ -1,28 +1,12 @@
 
-.sidebar-cart-active .sidebar-cart-all .cart-content ul li .cart-img {
+.cart_area .sidebar-cart-active .sidebar-cart-all .cart-content ul li .cart-img {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 70px;
       -ms-flex: 0 0 70px;
           flex: 0 0 70px;
 }
 
-.mb-15 {
-  margin-bottom: 15px;
-}
 
-.calculate-discount-content p {
-  font-size: 14px;
-  margin-bottom: 18px;
-  display: block;
-  color: #666;
-  line-height: 1;
-}
-
-.calculate-discount-content .input-style {
-  margin-bottom: 15px;
-}
-
-.calculate-discount-content .input-style input {
   color: #000000;
   height: 52px;
   border: 1px solid #e5e5e5;
@@ -59,22 +43,22 @@
           box-shadow: none;
 }
 
-.sidebar-cart-active .sidebar-cart-all .cart-content ul li .cart-img a img {
+.cart_area .sidebar-cart-active .sidebar-cart-all .cart-content ul li .cart-img a img {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   
 }
 
-ul {
+.cart_area ul {
   list-style: outside none none;
   margin: 0;
   padding: 0;
 }
-.breadcrumb-content {
+.cart_area .breadcrumb-content {
   position: relative;
 }
 
-.breadcrumb-content h2 {
+.cart_area .breadcrumb-content h2 {
   font-size: 48px;
   font-weight: 500;
   color: #323232;
@@ -110,7 +94,7 @@ ul {
   }
 }
 
-.breadcrumb-content ul {
+.cart_area .breadcrumb-content ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -121,22 +105,22 @@ ul {
           justify-content: center;
 }
 
-.breadcrumb-content ul li {
+.cart_area .breadcrumb-content ul li {
   margin-right: 7px;
   color: #686868;
 }
 
-.breadcrumb-content ul li:last-child {
+.cart_area .breadcrumb-content ul li:last-child {
   margin-right: 0;
 }
 
-.breadcrumb-content ul li a {
+.cart_area .breadcrumb-content ul li a {
   font-weight: 500;
   font-size: 13px;
   display: inline-block;
 }
 
-.breadcrumb-content ul li i {
+.cart_area .breadcrumb-content ul li i {
   font-size: 13px;
   line-height: 1;
   position: relative;
@@ -148,15 +132,15 @@ ul {
 
 
 
-.cart-table-content .table-content table {
+.cart_area .cart-table-content .table-content table {
     width: 100%;
   }
   
-  .cart-table-content .table-content table thead {
+  .cart_area .cart-table-content .table-content table thead {
     background-color: #f3f3f3;
   }
   
-  .cart-table-content .table-content table thead > tr th {
+  .cart_area .cart-table-content .table-content table thead > tr th {
     color: #000000;
     font-size: 15px;
     font-weight: 500;

@@ -3,16 +3,23 @@ import './Cart.css';
 import breadcamp1 from '../../../img/breadcrumb-1.png';
 import breadcamp2 from '../../../img/breadcrumb-2.png';
 import Header from '../Header/Header';
+
 import Footer from '../Footer/Footer';
 import { connect } from 'react-redux';
 import CartItem from './CartItem';
 import PaymentDetails from './PaymentDetails';
 
+import CartItem from './CartItem';
+import { connect } from 'react-redux';
+import { removeFromCart } from '../../../redux/actions/cardAction';
 
 function Cart({ cart }) {
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItem, setTotalItem] = useState(0);
     const [display, setDisplay] = useState(true);
+
+
+ main
 
     useEffect(() => {
         let items = 0;
@@ -28,7 +35,7 @@ function Cart({ cart }) {
 
     // console.log(cart)
     return (
-        <div>
+        <div className="cart_area">
             <Header></Header>
             <div class="breadcrumb-area bg-gray-4 breadcrumb-padding-1 d-flex justify-content-between " style={{ paddingTop: '200px', zIndex: '100' }}>
                 <div class="breadcrumb-img-1">
@@ -107,10 +114,12 @@ function Cart({ cart }) {
                 </div>
             </div>
 
+
             <div class={display ? 'd-none' : 'd-block'}>
             <PaymentDetails></PaymentDetails>
             </div>
             <Footer></Footer>
+ main
         </div>
     )
 }

@@ -10,6 +10,9 @@ import {
 import Home from './Components/Home/Home/Home';
 import Cart from './Components/Home/Cart/Cart';
 import Shop from './Components/Shop/Shop/Shop';
+import BlogPage from './Components/BlogPage/BlogPage/BlogPage';
+
+
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
           </Route>
           <Route path="/shop">
             <Shop></Shop>
+          </Route>
+          <Route path="/blog">
+            <BlogPage></BlogPage>
           </Route>
         </Switch>
     </Router>
