@@ -3,18 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import store from './redux/store/store';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import {Provider} from 'react-redux';
+import store from './redux/store';
+
 
 
 ReactDOM.render(
 
   <React.StrictMode>
-    <Provider store={store}>
+      <Provider store={store}>
       <App />
-    </Provider>
+      </Provider>
   </React.StrictMode >
   ,
   document.getElementById('root')

@@ -1,13 +1,10 @@
 import React from 'react';
 import './ProductThree.css';
-import { faShoppingCart, faHeart, faEye } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { connect } from 'react-redux';
-import SingleProduct from '../SingleProduct/SingleProduct';
-import { addToCart } from '../../../redux/actions/cardAction';
+import SingleProduct from '../SingleProduct/SingleProduct'
 
-const ProductThree = (props) => {
-    const { hotProducts, addToCart } = props;
+const ProductThree = ({ allProducts }) => {
+    // console.log(allProducts)
     return (
         <div className="product_three_area">
             <div className="container">
@@ -35,21 +32,21 @@ const ProductThree = (props) => {
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                         <div className="row">
                             {
-                                hotProducts.map(pd => <SingleProduct product={pd} addToCart={addToCart} key={pd.id}></SingleProduct>)
+                                allProducts.map(pd => <SingleProduct product={pd} key={pd.id}></SingleProduct>)
                             }
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                         <div className="row">
                             {
-                                hotProducts.map(pd => <SingleProduct product={pd} addToCart={addToCart} key={pd.id}></SingleProduct>)
+                                allProducts.map(pd => <SingleProduct product={pd} key={pd.id}></SingleProduct>)
                             }
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                         <div className="row">
                             {
-                                hotProducts.map(pd => <SingleProduct product={pd} addToCart={addToCart} key={pd.id}></SingleProduct>)
+                                allProducts.map(pd => <SingleProduct product={pd} key={pd.id}></SingleProduct>)
                             }
                         </div>
                     </div>
@@ -59,16 +56,10 @@ const ProductThree = (props) => {
     );
 };
 
-const mapStateToProps = state => {
+
+const mapStateToProps = (state) => {
     return {
-        cart: state.cart,
-        hotProducts: state.hotProducts
+        allProducts: state.shop.allProducts
     }
 }
-
-
-const mapDispatchToProps = {
-    addToCart: addToCart
-}
-// console.log(mapDispatchToProps)
-export default connect(mapStateToProps, mapDispatchToProps)(ProductThree);
+export default connect(mapStateToProps)(ProductThree);

@@ -1,9 +1,10 @@
 import React from 'react';
 import { faShoppingCart, faHeart, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { connect } from 'react-redux';
+import {addToCart} from '../../../redux/Shopping/shopping-actions'
 
-function SingleProduct(props) {
-    const {addToCart, product} = props;
+function SingleProduct({product, addToCart}) {
 
     
     return (
@@ -16,7 +17,7 @@ function SingleProduct(props) {
                         <a href="#" className="eye_icon"><FontAwesomeIcon icon={faEye} /></a>
                     </div>
                     <div  className="product_overlay">
-                        <button className="btn text-white" onClick={()=>addToCart(product.id, product, product.productName)}><FontAwesomeIcon icon={faShoppingCart} />Add to Card</button>
+                        <button className="btn text-white" onClick={() =>addToCart(product.id)}><FontAwesomeIcon icon={faShoppingCart} />Add to Card</button>
                     </div>
                 </div>
                 <div className="product_content">
@@ -31,4 +32,10 @@ function SingleProduct(props) {
     )
 }
 
-export default SingleProduct
+const mapToDispatch= dispatch =>{
+    return {
+        addToCart: (id) =>dispatch(addToCart(id))
+    }
+}
+
+export default connect(null, mapToDispatch)(SingleProduct)
