@@ -1,0 +1,31 @@
+.admin{
+    background: white;
+    height: 100%;
+}
+.ul{
+    list-style: none;
+}
+.ul>a{
+    padding: 5px 3px;
+}
+.ul>a:hover{
+    background-color: #eef5f9;
+    cursor: pointer;
+}
+.ul>a{
+    color: black;
+    display:block;
+margin: 5px 0;
+padding: 8px 4px;
+    
+}
+.ul>a:hover{
+      text-decoration: none;
+}
+.row{
+    height: 100%;
+}
+.selected{
+    background-color:#eef5f9;
+    width: 100%;
+}
