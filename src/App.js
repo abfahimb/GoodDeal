@@ -18,24 +18,24 @@ import BlogPage from './Components/BlogPage/BlogPage/BlogPage';
 function App() {
   return (
     <Router>
-        <Switch>
-           <Route><Dashboard /></Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/viewCart">
-            <Cart></Cart>
-          </Route>
-          <Route path="/shop">
-            <Shop></Shop>
-          </Route>
-          <Route path="/blog">
-            <BlogPage></BlogPage>
-          </Route>
-        </Switch>
+      <Switch>
+        {/* <Route><Dashboard /></Route> */}
+        <Route path='/home'>
+          <Home></Home>
+        </Route>
+        <Route exact path='/'>
+          <Home></Home>
+        </Route>
+        <Route path='/viewCart'>
+          <Cart></Cart>
+        </Route>
+        <Route path='/shop'>
+          <Shop></Shop>
+        </Route>
+        <Route path='/blog'>
+          <BlogPage></BlogPage>
+        </Route>
+      </Switch>
     </Router>
   );
 }
